@@ -1,0 +1,54 @@
+
+.iconfont {
+  display: block;
+}
+
+// element plus
+
+.el-message {
+  z-index: 99999 !important;
+
+  .el-icon {
+    font-size: 15px !important;
+  }
+}
+
+.el-loading-mask {
+  background-color: rgba(225, 225, 225, 0.4) !important;
+}
+
+// vant
+.van-popup {
+  border-radius: 16rem;
+  background: transparent !important;
+}
+
+.em-pop-wrap {
+  width: 345rem;
+  border-radius: 10rem;
+  background-color: #eaf4ff !important;
+  border: solid 2px #fff;
+}
+
+.func-btn {
+  $color: #07caf0;
+  $range: 2px; 
+
+  background-image: linear-gradient(90deg, #18e7ca 0%, #01c0fd 100%);
+  border-radius: 100px;
+  color: #fff;
+  box-shadow: 0 $range 0 0 $color;
+  padding-top: $range;
+
+  &.sink {
+    &:active {
+      // box-shadow: 0 1px 0 0 #2877c9;
+      box-shadow: 0 0 0 0 $color;
+      transform: translateY($range);
+    }
+  }
+  
+  &.disable {
+    filter: grayscale(99%);
+  }
+}

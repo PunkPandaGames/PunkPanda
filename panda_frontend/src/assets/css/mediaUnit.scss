@@ -1,0 +1,255 @@
+// 750 to rem, others vw
+
+@mixin -templateUnit($name, $px) {
+  @media (max-width: $phone) {
+    #{$name}: calc(#{$px}rem);
+  }
+
+  @media (min-width: $phone) and (max-width: $pad) {
+    #{$name}: #{$px}pm;
+  }
+
+  @media (min-width: $pad) {
+    #{$name}: #{$px}pw;
+  }
+}
+
+
+@mixin -width-a($px) {
+  @include -templateUnit(width, $px);
+}
+
+
+@mixin -height-a($px) {
+  @include -templateUnit(height, $px);
+}
+
+/**
+ *  font-size
+ */
+@mixin -font-size-a($px) {
+  @include -templateUnit(font-size, $px);
+}
+
+/**
+ *  padding-top
+ */
+@mixin -padding-top-a($px) {
+  @include -templateUnit(padding-top, $px);
+}
+
+/**
+ *  padding-right
+ */
+@mixin -padding-right-a($px) {
+  @include -templateUnit(padding-right, $px);
+}
+
+/**
+ *  padding-bottom
+ */
+@mixin -padding-bottom-a($px) {
+  @include -templateUnit(padding-bottom, $px);
+}
+
+/**
+ *  padding-left
+ */
+@mixin -padding-left-a($px) {
+  @include -templateUnit(padding-left, $px);
+}
+
+/**
+ *  margin-top
+ */
+@mixin -margin-top-a($px) {
+  @include -templateUnit(margin-top, $px);
+}
+
+/**
+ *  padding-right
+ */
+@mixin -margin-right-a($px) {
+  @include -templateUnit(margin-right, $px);
+}
+
+/**
+ *  margin-bottom
+ */
+@mixin -margin-bottom-a($px) {
+  @include -templateUnit(margin-bottom, $px);
+}
+
+/**
+ *  margin-left
+ */
+@mixin -margin-left-a($px) {
+  @include -templateUnit(margin-left, $px);
+}
+
+/**
+ *  border-radius
+ */
+@mixin -border-radius-a($px) {
+  @include -templateUnit(border-radius, $px);
+}
+
+/**
+ * top
+ */
+@mixin -top-a($px) {
+  @include -templateUnit(top, $px);
+}
+
+/**
+ * right
+ */
+@mixin -right-a($px) {
+  @include -templateUnit(right, $px);
+}
+
+/**
+ * bottom
+ */
+@mixin -bottom-a($px) {
+  @include -templateUnit(bottom, $px);
+}
+
+/**
+ * left
+ */
+@mixin -left-a($px) {
+  @include -templateUnit(left, $px);
+}
+
+/**
+ * margin 
+ */
+@mixin -margin-a($px1: '', $px2: '', $px3: '', $px4: '') {
+  @if ($px1 != '' and $px2 == '' and $px3 == '' and $px4 == '') {
+    @media (max-width: $phone) {
+      margin: #{$px1}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      margin: #{$px1}pm;
+    }
+
+    @media (min-width: $pad) {
+      margin: #{$px1}pw;
+    }
+  }
+
+  // top left
+  @if ($px1 != '' and $px2 != '' and $px3 == '' and $px4 == '') {
+    @media (max-width: $phone) {
+      margin: #{$px1}rem #{$px2}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      margin: #{$px1}pm #{$px2}pm;
+    }
+
+    @media (min-width: $pad) {
+      margin: #{$px1}pw #{$px2}pw;
+    }
+  }
+
+  // top left down
+  @if ($px1 != '' and $px2 != '' and $px3 != '' and $px4 == '') {
+    @media (max-width: $phone) {
+      margin: #{$px1}rem #{$px2}rem #{$px3}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      margin: #{$px1}pm #{$px2}pm #{$px3}pm;
+    }
+
+    @media (min-width: $pad) {
+      margin: #{$px1}pw #{$px2}pw #{$px3}pw;
+    }
+  }
+
+  // top right down left
+  @if ($px1 != '' and $px2 != '' and $px3 != '' and $px4 != '') {
+    @media (max-width: $phone) {
+      margin: #{$px1}rem #{$px2}rem #{$px3}rem #{$px4}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      margin: #{$px1}pm #{$px2}pm #{$px3}pm #{$px4}pm;
+    }
+
+    @media (min-width: $pad) {
+      margin: #{$px1}pw #{$px2}pw #{$px3}pw #{$px4}pw;
+    }
+  }
+}
+
+/**
+ * padding 
+ */
+@mixin -padding-a($px1: '', $px2: '', $px3: '', $px4: '') {
+  @if ($px1 != '' and $px2 == '' and $px3 == '' and $px4 == '') {
+    @media (max-width: $phone) {
+      padding: #{$px1}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      padding: #{$px1}pm;
+    }
+
+    @media (min-width: $pad) {
+      padding: #{$px1}pw;
+    }
+  }
+
+  @if ($px1 != '' and $px2 != '' and $px3 == '' and $px4 == '') {
+    @media (max-width: $phone) {
+      padding: #{$px1}rem #{$px2}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      padding: #{$px1}pm #{$px2}pm;
+    }
+
+    @media (min-width: $pad) {
+      padding: #{$px1}pw #{$px2}pw;
+    }
+  }
+
+  @if ($px1 != '' and $px2 != '' and $px3 != '' and $px4 == '') {
+    @media (max-width: $phone) {
+      padding: #{$px1}rem #{$px2}rem #{$px3}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      padding: #{$px1}pm #{$px2}pm #{$px3}pm;
+    }
+
+    @media (min-width: $pad) {
+      padding: #{$px1}pw #{$px2}pw #{$px3}pw;
+    }
+  }
+
+  @if ($px1 != '' and $px2 != '' and $px3 != '' and $px4 != '') {
+    @media (max-width: $phone) {
+      padding: #{$px1}rem #{$px2}rem #{$px3}rem #{$px4}rem;
+    }
+
+    @media (min-width: $phone) and (max-width: $pad) {
+      padding: #{$px1}pm #{$px2}pm #{$px3}pm #{$px4}pm;
+    }
+
+    @media (min-width: $pad) {
+      padding: #{$px1}pw #{$px2}pw #{$px3}pw #{$px4}pw;
+    }
+  }
+}
+
+/**
+ * eg:
+ * .box {
+ *    @include -width-a(20);
+ * }
+ */

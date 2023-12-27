@@ -1,0 +1,15 @@
+$phone: 750px; // phone  750 
+$pad: 1280px; // pad   750~1280
+$pc: 1920px; // pc     1280
+
+
+$pcTopBarHeight: 70px; // pc 
+$mobTopBarHeight: 80rem; // phone
+
+
+$mainHeight: calc(100vh - (#{$pcTopBarHeight}));
+
+
+$mobMainHeight: calc(100vh - (#{$mobTopBarHeight}));
+
+$walletBtnMenuGap: 5rem;
